@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	. "github.com/xtao/webGo"
+	. "github.com/xtao/goWeb"
 )
 
 func main() {

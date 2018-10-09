@@ -3,7 +3,7 @@ package webFile
 import (
 	"fmt"
 
-	. "github.com/xtao/webGo/server"
+	. "github.com/xtao/goWeb/server"
 )
 
 const (

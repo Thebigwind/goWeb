@@ -2,7 +2,6 @@ package server
 
 import (
 	"net/http"
-	//. "github.com/xtao/webGo/common"
 )
 
 type RestServer struct {

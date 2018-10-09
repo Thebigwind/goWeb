@@ -12,8 +12,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	. "github.com/xtao/webGo/common"
-	. "github.com/xtao/webGo/server/manager"
+	. "github.com/xtao/goWeb/common"
+	. "github.com/xtao/goWeb/server/manager"
 )
 
 func RootHandler(w http.ResponseWriter, r *http.Request) {

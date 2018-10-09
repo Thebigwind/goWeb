@@ -11,8 +11,8 @@ import (
 	   可以从我们设定的路由表达式中提取出参数方便上层应用，而且完全兼容http.ServerMux
 	*/
 	"github.com/gorilla/mux"
-	. "github.com/xtao/webGo/common"
-	. "github.com/xtao/webGo/server/handler"
+	. "github.com/xtao/goWeb/common"
+	. "github.com/xtao/goWeb/server/handler"
 )
 
 type Route struct {

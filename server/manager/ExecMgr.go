@@ -8,7 +8,7 @@ import (
 
 	//	"time"
 
-	. "github.com/xtao/webGo/common"
+	. "github.com/xtao/goWeb/common"
 )
 
 type ExecMgr struct {
