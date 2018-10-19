@@ -1,0 +1,4 @@
+time="2018-10-19T14:51:36+08:00" level=error msg="&{127.0.0.1 5432 postgres 123456 postgres testdb}" Module=Database 
+time="2018-10-19T14:51:36+08:00" level=info msg="database connection successfully! 
+" Module=Database 
+time="2018-10-19T14:51:36+08:00" level=info msg="datase connect now..." Module=Base 
