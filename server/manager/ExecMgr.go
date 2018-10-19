@@ -1,4 +1,4 @@
-package manager
+package managers
 
 import (
 	"errors"
@@ -8,7 +8,7 @@ import (
 
 	//	"time"
 
-	. "github.com/xtao/goWeb/common"
+	. "github.com/bigwind/goWeb/common"
 )
 
 type ExecMgr struct {

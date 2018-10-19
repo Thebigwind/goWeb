@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	. "github.com/xtao/goWeb"
+	. "github.com/bigwind/goWeb"
 )
 
 func main() {

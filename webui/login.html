@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <h3>首页相关</h3><hr>
+
+        http://127.0.0.1:9090/v1/goweb/login<br>
+        传入参数 POST
+        {
+            "username":"aa",
+            "password":"bb"
+        }
+        <br><button id="login_button">测试</button>
+        <button id="login_button_reset">重置</button><br>
+        <pre id="login"></pre>
+        <br><br>
+
+        <script>
+        $("#login_button").click(function() {
+            $.ajax({
+                type: "POST",
+                url: "http://127.0.0.1:9090/v1/goweb/login",
+
+                data: {
+                    "username": "aa",
+                    "password": "bb",
+                },
+                dataType: "json",
+                success: function(data){
+                    $("#login").text(JSON.stringify(data,null,4));
+                }
+            })
+        });
+        $("#login_button_reset").click(function() {
+            $("#login").html("");
+        });
+        </script>     
+</body>
+</html>
