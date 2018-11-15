@@ -31,6 +31,7 @@
                 },
                 dataType: "json",
                 success: function(data){
+					alert(data)
                     $("#login").text(JSON.stringify(data,null,4));
                 }
             })

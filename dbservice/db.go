@@ -3,6 +3,8 @@ package dbservice
 import (
 	"errors"
 	"fmt"
+	"strconv"
+	"strings"
 
 	. "github.com/bigwind/goWeb/common"
 	_ "github.com/lib/pq"
@@ -73,4 +75,38 @@ func (db *dbService) GetUserIDByName(userName string) (error, int) {
 	}
 
 	return nil, userID
+}
+
+func (db *dbService) BatchMode1(id int, addressTags string) error {
+	tx, err := db.db.Begin()
+	defer func() {
+		if tx != nil {
+			if err != nil {
+				tx.Rollback()
+			} else {
+				tx.Commit()
+			}
+		}
+	}()
+
+	insertSql := ""
+	tags := strings.Split(addressTags, ",")
+	for _, tag := range tags {
+		if tag == "" {
+			continue
+		}
+		insertSql += "INSERT INTO batch_test values(" + strconv.Itoa(id) + ");"
+	}
+	if insertSql == "" {
+		return nil
+	}
+	Logger.Infoln("insertSql=%s", insertSql)
+
+	err = db.TxExec(tx, insertSql)
+	if err != nil {
+		Logger.Errorf(err.Error())
+		err = errors.New("insert address tags failed.")
+		return err
+	}
+	return nil
 }

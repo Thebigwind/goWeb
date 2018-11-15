@@ -1,0 +1,17 @@
+zmfsea:
+ssh root@10.41.25.35 -> 
+ssh root@172.168.128.180 -> 
+ssh root@10.0.0.161
+
+luffy:
+[图片]
+
+zmfsea:
+metacli fs ls -p /vol1  -z metaview-gp001.marathon.mesos:7789
+metacli fs ls -p /vol1  -z metaview-vol1.marathon.mesos:7789
+
+luffy:
+我这边测的本地连其他机器没问题啊
+
+zmfsea:
+那你看看geneplug那个环境，是不是metacli版本有问题呢

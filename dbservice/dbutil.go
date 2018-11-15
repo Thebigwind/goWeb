@@ -9,7 +9,7 @@ import (
 
 	"regexp"
 
-	. "github.com/bigwind/goWeb/common"
+	. "github.com/bigwind/goWeb/common" //DBLogger
 	_ "github.com/lib/pq"
 )
 

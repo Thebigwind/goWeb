@@ -13,7 +13,9 @@ func NewRouter() *negroni.Negroni {
 	router := mux.NewRouter().StrictSlash(true)
 
 	router.HandleFunc("/", RootHandler).Methods("GET")
-	router.HandleFunc("/v1/goweb/login", Login).Methods("POST")
+	router.HandleFunc("/v1/goweb/login", LoginHandler).Methods("POST")
+	router.HandleFunc("/v1/goweb/upload", UploadHandler).Methods("POST")
+
 	//router.HandleFunc("/api/cmd/run", RunCmdHandler).Methods("GET")
 
 	router.PathPrefix("/").Handler(http.FileServer(http.Dir(STATIC_DIR)))
