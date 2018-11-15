@@ -1,7 +1,5 @@
 zmfsea:
-ssh root@10.41.25.35 -> 
-ssh root@172.168.128.180 -> 
-ssh root@10.0.0.161
+
 
 luffy:
 [ͼƬ]
